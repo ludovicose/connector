@@ -26,7 +26,7 @@ class Register extends Component {
             name: this.state.name,
             email: this.state.email,
             password: this.state.password,
-            password2: this.state.password,
+            password2: this.state.password2,
         };
 
         console.log(newUser);
@@ -80,8 +80,6 @@ class Register extends Component {
                     </div>
                 </div>
             </div>
-
-
         )
     }
 }
