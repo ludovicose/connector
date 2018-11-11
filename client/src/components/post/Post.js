@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import CommentForm from './CommentForm';
 import Spinner from '../common/Spinner';
 import PostItem from '../posts/PostItem';
 import {getPost} from "../../actions/postAction";
@@ -19,10 +20,11 @@ class Post extends Component {
 
         if (post === null || loading || Object.keys(post).length === 0) {
             postContent = <Spinner/>
-        }else{
+        } else {
             postContent = (
                 <div>
                     <PostItem post={post} showActions={false}/>
+                    <CommentForm postId={post._id}/>
                 </div>
             );
         }
